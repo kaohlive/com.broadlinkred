@@ -28,9 +28,9 @@ class BroadlinkApp extends Homey.App {
 
 	onInit() {
 		
-		Homey.on('memwarn', () => {
-			// simply ignore it
-		})
+		// Homey.on('memwarn', () => {
+		// 	// simply ignore it
+		// })
 	}
 }
 

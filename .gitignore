@@ -16,3 +16,7 @@ env.json
 .project
 .settings
 
+
+
+# Added by Homey CLI
+/.homeybuild/

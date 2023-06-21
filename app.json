@@ -1,8 +1,8 @@
 {
   "id": "com.broadlinkrednode",
   "version": "1.0.2",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "name": {
     "en": "Broadlinkred"
   },
@@ -15,9 +15,6 @@
     "appliances",
     "lights",
     "climate"
-  ],
-  "permissions": [
-    "homey:manager:speech-output"
   ],
   "images": {
     "large": "/assets/images/large.jpg",
@@ -116,7 +113,7 @@
         ]
       },
       {
-        "id": "RC_sent_any",
+        "id": "RC_sent_any_rm4",
         "title": {
           "en": "Any Remote Command transmitted",
           "nl": "Commando verzonden"
@@ -144,7 +141,7 @@
         ]
       },
       {
-        "id": "RC_specific_sent",
+        "id": "RC_specific_sent_rm4",
         "title": {
           "en": "Remote Command transmitted",
           "nl": "Commando verzonden"
@@ -190,7 +187,7 @@
         ]
       },
       {
-        "id": "send_command",
+        "id": "send_command_rm4",
         "title": {
           "en": "Send Remote Command",
           "nl": "Verstuur commando"
