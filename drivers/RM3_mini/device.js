@@ -182,8 +182,12 @@ class RM3miniDevice extends BroadlinkDevice {
 	 *
 	 *  @param changedKeysArr   contains an array of keys that have been changed
 	 */
-	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
+	onSettings( event ) {
 
+		console.log(JSON.stringify(event))
+		let oldSettingsObj= event.oldSettings
+		let newSettingsObj= event.newSettings
+		let changedKeysArr= event.changedKeys
 		super.onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, null );
 
 		let i = 0;
@@ -202,12 +206,12 @@ class RM3miniDevice extends BroadlinkDevice {
 			if(newName.length > 0) {
 				if(oldName.length > 0) {
 					if( this.dataStore.findCommand( newName ) >= 0 ) {
-						callback( Homey.__('errors.save_settings_exist', { 'cmd': newName } ), false);
+						//callback( Homey.__('errors.save_settings_exist', { 'cmd': newName } ), false);
 						return;
 					}
 				}
 				else {
-					callback( Homey.__('errors.save_settings_nocmd', {'cmd': newName }), null);
+					//callback( Homey.__('errors.save_settings_nocmd', {'cmd': newName }), null);
 					return;
 				}
 			}
@@ -226,7 +230,8 @@ class RM3miniDevice extends BroadlinkDevice {
 			}
 		}
 
-		callback( null, true );
+		//callback( null, true );
+		return true;
 
 	    // always fire the callback, or the settings won't change!
 	    // if the settings must not be saved for whatever reason:
